@@ -1,0 +1,49 @@
+﻿@model MIS4200_tt240016.Models.Professor
+
+@{
+    ViewBag.Title = "Professor Details";
+}
+
+<h2>Professor Details</h2>
+
+<div>
+    
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.professorFirst)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.professorFirst)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.professorLast)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.professorLast)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.professorEmaail)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.professorEmaail)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.professorPhone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.professorPhone)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.professorID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

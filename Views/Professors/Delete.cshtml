@@ -1,0 +1,55 @@
+﻿@model MIS4200_tt240016.Models.Professor
+
+@{
+    ViewBag.Title = "Delete Professor";
+}
+
+<h2>Delete a Professor</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+ 
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.professorFirst)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.professorFirst)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.professorLast)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.professorLast)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.professorEmaail)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.professorEmaail)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.professorPhone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.professorPhone)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-danger" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

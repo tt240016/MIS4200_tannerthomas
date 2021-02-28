@@ -1,0 +1,49 @@
+﻿@model MIS4200_tt240016.Models.Enrollment
+
+@{
+    ViewBag.Title = "Enrollment Details";
+}
+
+<h2>Enrollment Details</h2>
+
+<div>
+    
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.course.description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.course.description)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.student.studentFirst)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.student.studentFirst)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.classLevel)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.classLevel)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.classRequired)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.classRequired)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.enrollmentID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,51 @@
+﻿@model IEnumerable<MIS4200_tt240016.Models.Enrollment>
+
+@{
+    ViewBag.Title = "Enrollment Index";
+}
+
+<h2>Enrollment Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.course.description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.student.studentFirst)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.classLevel)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.classRequired)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.course.description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.student.studentFirst)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.classLevel)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.classRequired)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.enrollmentID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.enrollmentID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.enrollmentID })
+        </td>
+    </tr>
+}
+
+</table>
