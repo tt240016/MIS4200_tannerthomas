@@ -40,7 +40,7 @@ namespace MIS4200_tt240016.Controllers
         // GET: Courses/Create
         public ActionResult Create()
         {
-            ViewBag.professorID = new SelectList(db.professor, "professorID", "professorFirst");
+            ViewBag.professorID = new SelectList(db.professor, "professorID", "professorFull");
             return View();
         }
 

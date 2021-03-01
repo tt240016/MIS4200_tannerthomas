@@ -41,7 +41,7 @@ namespace MIS4200_tt240016.Controllers
         public ActionResult Create()
         {
             ViewBag.courseID = new SelectList(db.course, "courseID", "description");
-            ViewBag.studentID = new SelectList(db.student, "studentID", "studentFirst");
+            ViewBag.studentID = new SelectList(db.student, "studentID", "studentFull");
             return View();
         }
 

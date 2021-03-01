@@ -12,16 +12,16 @@
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.professor.professorFirst)
+            Professor's Name
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.description)
+            Class
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.beginDate)
+            Beginning Date
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.endDate)
+            Ending Date
         </th>
         <th></th>
     </tr>
@@ -29,7 +29,7 @@
 @foreach (var item in Model) {
     <tr>
         <td>
-            @Html.DisplayFor(modelItem => item.professor.professorFirst)
+            @Html.DisplayFor(modelItem => item.professor.professorFull)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.description)
