@@ -1,36 +1,36 @@
 ﻿@model IEnumerable<MIS4200_tt240016.Models.Student>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Student Index";
 }
 
-<h2>Index</h2>
+<h2>Student Index <span class="glyphicon glyphicon-user"></span></h2>
 
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
-<table class="table">
-    <tr>
+<table class="table table-bordered">
+    <tr class="success">
         <th>
-            @Html.DisplayNameFor(model => model.studentFirst)
+            Student First Name
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.studentLast)
+            Student Last Name
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.studentEmail)
+            Student Email
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.studentPhone)
+            Student Phone
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.courseID)
+            Course ID
         </th>
         <th></th>
     </tr>
 
 @foreach (var item in Model) {
-    <tr>
+    <tr class="info">
         <td>
             @Html.DisplayFor(modelItem => item.studentFirst)
         </td>
